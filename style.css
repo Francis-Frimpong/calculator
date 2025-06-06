@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
 }
 
 body {
@@ -23,11 +24,11 @@ body {
   background-color: hsl(224, 36%, 15%);
   outline: none;
   border: none;
-  caret-color: white;
+  caret-color: hsl(0, 0%, 100%);
   font-size: 2em;
   text-align: right;
   padding: 1em;
-  color: white;
+  color: hsl(0, 0%, 100%);
   margin-bottom: 1em;
 }
 
@@ -50,18 +51,19 @@ body {
 
 .number-keys button {
   padding: 15px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   border: none;
   background-color: hsl(30, 25%, 89%);
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease;
+  color: hsl(221, 14%, 31%);
 }
 
 .number-keys .delete-btn {
   background-color: hsl(225, 21%, 49%);
-  color: hsl(30, 25%, 89%);
+  color: hsl(0, 0%, 100%);
   border-radius: 8px;
 }
 
@@ -73,25 +75,22 @@ body {
 }
 
 .reset-btn button {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   padding: 15px;
   font-size: 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #4caf50; /* example color */
-  color: white;
+  color: hsl(0, 0%, 100%);
   transition: background 0.2s ease;
 }
 
 .reset-btn .resetbtn {
   background-color: hsl(225, 21%, 49%);
-  color: hsl(30, 25%, 89%);
   text-align: center;
 }
 
 .reset-btn .equal-btn {
   background-color: hsl(6, 63%, 50%);
-  color: hsl(30, 25%, 89%);
 }
