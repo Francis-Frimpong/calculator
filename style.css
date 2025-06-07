@@ -55,6 +55,7 @@ body {
   font-weight: 700;
   border: none;
   background-color: hsl(30, 25%, 89%);
+  box-shadow: 0 4px 0px hsl(28, 16%, 65%);
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease;
@@ -64,6 +65,7 @@ body {
 .number-keys .delete-btn {
   background-color: hsl(225, 21%, 49%);
   color: hsl(0, 0%, 100%);
+  box-shadow: 0 4px 0px hsl(224, 28%, 35%);
   border-radius: 8px;
 }
 
@@ -88,9 +90,11 @@ body {
 
 .reset-btn .resetbtn {
   background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 4px 0px hsl(224, 28%, 35%);
   text-align: center;
 }
 
 .reset-btn .equal-btn {
   background-color: hsl(6, 63%, 50%);
+  box-shadow: 0 4px 0px hsl(6, 70%, 34%);
 }
