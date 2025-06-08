@@ -4,6 +4,7 @@ const keysContainer = document.querySelector(".number-keys");
 const screen = document.querySelector("#screen");
 const resetBtn = document.querySelector(".resetbtn");
 const equalBtn = document.querySelector(".equal-btn");
+const deleteBtn = document.querySelector(".delete-btn");
 
 const numOperators = ["+", "-", "/", "*"];
 let displayExp = "";
@@ -38,4 +39,12 @@ equalBtn.addEventListener("click", () => {
 
 resetBtn.addEventListener("click", () => {
   screen.value = 0;
+});
+
+deleteBtn.addEventListener("click", () => {
+  if (displayExp !== "") {
+    displayExp = displayExp.slice(0, -1);
+    evalExp = evalExp.slice(0, -1);
+    screen.value = displayExp;
+  }
 });
