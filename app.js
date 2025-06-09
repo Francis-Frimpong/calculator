@@ -9,8 +9,8 @@ const deleteBtn = document.querySelector(".delete-btn");
 const numOperators = ["+", "-", "/", "*"];
 let displayExp = "";
 let evalExp = "";
-
-keysContainer.addEventListener("click", (e) => {
+// number button function
+function digitAndOperatorBtnEvent(e) {
   numberBtn.forEach((key) => {
     if (e.target === key) {
       displayExp += key.textContent;
@@ -26,25 +26,35 @@ keysContainer.addEventListener("click", (e) => {
       screen.value = displayExp;
     }
   });
-});
+}
 
-equalBtn.addEventListener("click", () => {
+// equal button function
+function equalBtnEvent() {
   if (screen.value === "") {
     return;
   }
 
   let result = evalExp;
   screen.value = eval(result);
-});
+}
 
-resetBtn.addEventListener("click", () => {
-  screen.value = 0;
-});
+//reset button function
+function resetBtnEvent() {
+  let ledScreen = (screen.value = "");
+  displayExp = ledScreen;
+  evalExp = ledScreen;
+}
 
-deleteBtn.addEventListener("click", () => {
+// delete button function
+function deleteBtnEvent() {
   if (displayExp !== "") {
     displayExp = displayExp.slice(0, -1);
     evalExp = evalExp.slice(0, -1);
     screen.value = displayExp;
   }
-});
+}
+
+keysContainer.addEventListener("click", digitAndOperatorBtnEvent);
+equalBtn.addEventListener("click", equalBtnEvent);
+resetBtn.addEventListener("click", resetBtnEvent);
+deleteBtn.addEventListener("click", deleteBtnEvent);
